@@ -1,0 +1,37 @@
+<div class="main-container bg-dark">
+    <div class="address-container shadow bg-light rounded-4">
+        <div>
+            <div class="text-center fw-bold title">
+                <span class="first-word">Via</span>
+                <span class="secound-word">Cep</span>
+            </div>
+
+            <div class="d-flex">
+                <div class="position-relative w-100 me-2">
+                    <input type="text" class="form-control w-100 pe-5" placeholder="Digite seu CEP">
+                    <span class="position-absolute top-50 end-0 translate-middle-y me-3 text-secondary">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </div>
+
+                <div>
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4 w-100">
+            <div class="shadow-sm border-0 rounded-4 p-3" style="background-color: #788ea327;">
+                <h5 class="mb-3 fw-bold text-center">
+                    Seu Endereço
+                </h5>
+                <div class="d-flex flex-column gap-1">
+                    <div><strong>CEP:</strong> {{address.cep}}</div>
+                    <div><strong>Cidade:</strong> {{address.city}}</div>
+                    <div><strong>UF:</strong> {{address.uf}}</div>
+                    <div><strong>Bairro:</strong> {{address.neighborhood}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
