@@ -3,7 +3,7 @@ import { AddressComponent } from './components/address/address.component';
 
 export const routes: Routes = [
     {
-        path: "address",
+        path: "",
         component: AddressComponent
     }
 ];
