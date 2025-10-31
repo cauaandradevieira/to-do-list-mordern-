@@ -6,18 +6,20 @@
                 <span class="secound-word">Cep</span>
             </div>
 
-            <div class="d-flex">
-                <div class="position-relative w-100 me-2">
-                    <input type="text" class="form-control w-100 pe-5" placeholder="Digite seu CEP">
-                    <span class="position-absolute top-50 end-0 translate-middle-y me-3 text-secondary">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                </div>
+            <form [formGroup]="form" (ngSubmit)="clickTest()">
+                <div class="d-flex">
+                    <div class="position-relative w-100 me-2">
+                        <input type="text" class="form-control w-100 pe-5" placeholder="Digite seu CEP" formControlName="cep">
+                        <span class="position-absolute top-50 end-0 translate-middle-y me-3 text-secondary">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                    </div>
 
-                <div>
-                    <button class="btn btn-primary">Submit</button>
+                    <div>
+                        <button class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
 
         <div class="container mt-4 w-100">
@@ -26,10 +28,10 @@
                     Seu Endereço
                 </h5>
                 <div class="d-flex flex-column gap-1">
-                    <div><strong>CEP:</strong> {{address.cep}}</div>
-                    <div><strong>Cidade:</strong> {{address.city}}</div>
-                    <div><strong>UF:</strong> {{address.uf}}</div>
-                    <div><strong>Bairro:</strong> {{address.neighborhood}}</div>
+                    <div><strong>CEP:{{ address.cep }}</strong> </div>
+                    <div><strong>Cidade:{{ address.city }}</strong> </div>
+                    <div><strong>UF:{{ address.uf }}</strong> </div>
+                    <div><strong>Bairro: {{ address.neighborhood }}</strong> </div>
                 </div>
             </div>
         </div>
